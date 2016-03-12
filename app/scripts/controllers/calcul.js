@@ -8,22 +8,22 @@
  * Controller of the premiereAppApp
  */
  angular.module('premiereAppApp')
- .controller('CalculCtrl', function ($scope) {
+ .controller('CalculCtrl', function ($scope, calculateur) {
 
  	$scope.addition = function(){
- 		return (parseInt($scope.premierNombre) + parseInt($scope.secondNombre));
+ 		return calculateur.addition(parseInt($scope.premierNombre), parseInt($scope.secondNombre));
  	};
 
  	$scope.soustraction = function(){
- 		return ($scope.premierNombre - $scope.secondNombre);
+ 		return calculateur.soustraction($scope.premierNombre , $scope.secondNombre);
  	};
 
  	$scope.multiplication = function(){
- 		return ($scope.premierNombre * $scope.secondNombre);
+ 		return calculateur.multiplication($scope.premierNombre, $scope.secondNombre);
  	};
 
  	$scope.division = function(){
- 		return ($scope.premierNombre / $scope.secondNombre);
+ 		return calculateur.division($scope.premierNombre, $scope.secondNombre);
  	};
 
  });
