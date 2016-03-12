@@ -1,1 +1,12 @@
-<p>C'est la vue calcul en français</p>
+<div>
+	<p>Nous allons pouvoir faire des calculs ensemble !!</p>
+	<p>Quels nombres voulez vous manipuler ?</p>
+	<p>Le premier : <input ng-model="premierNombre"/></p>
+	<p>Le second : <input ng-model="secondNombre"/></p>
+</div>
+<div>
+	<p>Leur addition est : <span ng-bind="addition()"></span></p>
+	<p>Leur soustraction est : <span ng-bind="soustraction()"></span></p>
+	<p>Leur multiplication est : <span ng-bind="multiplication()"></span></p>
+	<p>Leur division est : <span ng-bind="division()"></span></p>
+</div>

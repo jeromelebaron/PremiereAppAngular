@@ -7,11 +7,23 @@
  * # CalculCtrl
  * Controller of the premiereAppApp
  */
-angular.module('premiereAppApp')
-  .controller('CalculCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+ angular.module('premiereAppApp')
+ .controller('CalculCtrl', function ($scope) {
+
+ 	$scope.addition = function(){
+ 		return (parseInt($scope.premierNombre) + parseInt($scope.secondNombre));
+ 	};
+
+ 	$scope.soustraction = function(){
+ 		return ($scope.premierNombre - $scope.secondNombre);
+ 	};
+
+ 	$scope.multiplication = function(){
+ 		return ($scope.premierNombre * $scope.secondNombre);
+ 	};
+
+ 	$scope.division = function(){
+ 		return ($scope.premierNombre / $scope.secondNombre);
+ 	};
+
+ });
