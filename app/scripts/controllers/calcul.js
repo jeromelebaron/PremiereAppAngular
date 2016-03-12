@@ -10,8 +10,11 @@
  angular.module('premiereAppApp')
  .controller('CalculCtrl', function ($scope, calculateur) {
 
+ 	$scope.premierNombre = 0;
+ 	$scope.secondNombre = 0;
+
  	$scope.addition = function(){
- 		return calculateur.addition(parseInt($scope.premierNombre), parseInt($scope.secondNombre));
+ 		return calculateur.addition($scope.premierNombre, $scope.secondNombre);
  	};
 
  	$scope.soustraction = function(){
