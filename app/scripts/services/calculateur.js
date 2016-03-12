@@ -25,8 +25,12 @@
     	},
 
     	division : function(premierNombre, secondNombre){
-    		return premierNombre / secondNombre;
-    	}
+            if (secondNombre === 0) {
+                return ' division par zéro impossible';
+            } else {
+                return premierNombre / secondNombre;
+            }
+        }
 
 
     };
