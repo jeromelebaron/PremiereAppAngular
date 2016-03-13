@@ -36,6 +36,11 @@ angular
         controller: 'CalculCtrl',
         controllerAs: 'calcul'
       })
+      .when('/toDoList', {
+        templateUrl: 'views/todolist.html',
+        controller: 'TodolistCtrl',
+        controllerAs: 'toDoList'
+      })
       .otherwise({
         redirectTo: '/'
       });

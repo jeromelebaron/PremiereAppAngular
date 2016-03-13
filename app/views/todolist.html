@@ -1,0 +1,18 @@
+<div class="row">
+	<h1>To Do List</h1>
+</div>
+<div class="row form-group">
+	<input ng-model="todo" class="col-md-8" type="text" placeholder="Veuillez renseigner une tache"/>
+	<button class="col-md-2 col-md-offset-1 btn" ng-click="ajouterTodo()">Ajouter</button>
+</div>
+<div ng-repeat="todo in todoList" class="row">
+	<input type="checkbox" class="col-md-1" ng-model="todo.completed"/>
+	<span class="col-md-7">{{todo.title}}</span>
+	<span class="glyphicon glyphicon-remove col-md-1" ng-click="supprimerTodo(todo)"></span>
+</div>
+<div class="row">
+	<hr/>
+	<input type="checkbox" class="col-md-1" ng-click="toutCocher(allChecked)"/>
+</div>
+
+
